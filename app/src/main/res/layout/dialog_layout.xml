@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="@dimen/_150sdp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/listdesign"
+    >
+    <ImageView
+        android:id="@+id/Dialog_Profile"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/profile_icon">
+    </ImageView>
+    <TextView
+        android:id="@+id/notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are You Sure To Remove This User From Best Friend After This He/She Can't Edit Your Profile"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/yesbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YES"
+            android:layout_weight="1"></Button>
+        <Button
+            android:id="@+id/nobtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:layout_weight="1"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>

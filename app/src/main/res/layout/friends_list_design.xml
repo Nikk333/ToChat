@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/googlelgn"
+            android:layout_gravity="center"
+            android:transitionName="fade"
+            app:civ_circle_background_color="@color/white"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ONLINE"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_minus9sdp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/_1sdp"
+            android:src="@drawable/online"/>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userstatus"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_weight="2"
+                    android:text="Messages"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <TextView
+                    android:id="@+id/userstatusonoff"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="start"
+                    android:text="online"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/profile_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+

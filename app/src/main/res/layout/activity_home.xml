@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitelight"
+    tools:context=".HOME"
+    android:id="@+id/rlayout">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/TOP_CARD"
+        app:cardBackgroundColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <LinearLayout
+            android:id="@+id/TOP_LAYOUT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Users"
+                android:textColor="@color/blacklight"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:textSize="@dimen/_24sdp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:cardCornerRadius="@dimen/_18sdp"
+                android:layout_weight="3"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                app:cardBackgroundColor="@color/whitelight"
+                android:outlineSpotShadowColor="@color/whitelight"
+                android:outlineAmbientShadowColor="@color/whitelight">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/search"/>
+                    <EditText
+                        android:id="@+id/SEARCH_HOME"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textColor="@color/black"
+                        android:hint="Search Person...."
+                        android:layout_gravity="start"
+                        android:layout_weight="3"
+                        android:textColorHint="@color/gray"
+                        android:padding="@dimen/_8sdp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/REQUEST_BTN"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/useradd"></ImageView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/USERLISTVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TOP_CARD"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_1sdp" />
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".USERDETAILPAGE">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CVUSERDETAILPAGE"
+        android:layout_width="@dimen/_305sdp"
+        android:layout_height="@dimen/_280sdp"
+        android:layout_marginBottom="-15dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/lightpurple"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ExtraText,VisualLintBounds">
+        <TextView
+            android:id="@+id/USERNAME_TEXT_USERDETAILPAGE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="User name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+        <EditText
+            android:id="@+id/USERNAME_ENTRY_USERDETAILPAGE"
+            android:layout_width="@dimen/_235sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:background="@drawable/entrycolor"
+            android:defaultFocusHighlightEnabled="true"
+            android:hint="@user123"
+            android:textColorHint="@color/textcolor"
+            android:inputType="text"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+        //////////////////////////
+        <TextView
+            android:id="@+id/PASSWORD_TEXT_USERDETAILPAGE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_75sdp"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+        <EditText
+            android:id="@+id/PASSWORD_ENTRY_USERDETAILPAGE"
+            android:layout_width="@dimen/_235sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_95sdp"
+            android:background="@drawable/entrycolor"
+            android:defaultFocusHighlightEnabled="true"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/CONFIRMPASSWORD_TEXT_USERDETAILPAGE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_140sdp"
+            android:text="Confirm password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+        <EditText
+            android:id="@+id/CONFIRMPASSWORD_ENTRY_USERDETAILPAGE"
+            android:layout_width="@dimen/_235sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_160sdp"
+            android:background="@drawable/entrycolor"
+            android:defaultFocusHighlightEnabled="true"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SUBMIT_CV_USERDETAILPAGE"
+            android:layout_width="@dimen/_235sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_215sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:outlineSpotShadowColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:id="@+id/LOGIN_TEXT_USERDETAILPAGE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Submit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="@dimen/_350sdp"
+        android:layout_height="@dimen/_280sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:scaleType="fitXY"
+        android:paddingBottom="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@+id/CVUSERDETAILPAGE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/loginpage"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/TITLE_TEXT_USERDETAILPAGE"
+        android:layout_width="356dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

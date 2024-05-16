@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToChat</string>
+    <string name="default_web_client_id" translatable="false">695836359223-kjbms17osocj4vaolkhpfcu8f7k27irs.apps.googleusercontent.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello">hello</string>
+    <string name="status">status</string>
+</resources>

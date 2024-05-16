@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="gray">#C31B1A1A</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#dee2f8</color>
+    <color name="lightpurple">#efeef6</color>
+    <color name="darkpurple">#495d92</color>
+    <color name="linkpurple">#2209FF</color>
+    <color name="whitelight">#f2f2f2</color>
+    <color name="whitehighlight">#D8D8D8</color>
+    <color name="red">#ff2f2f</color>
+    <color name="darkest">#1e2336</color>
+    <color name="darkblue">#FF112233</color>
+    <color name="blacklight">#1e1e1e</color>
+    <color name="blackhighlight">#313131</color>
+    <color name="pinkish">#d91359</color>
+    <color name="textcolor">#696969</color>
+    <color name="bottomnav">#f9fafd</color>
+</resources>

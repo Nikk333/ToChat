@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitelight"
+    tools:context=".FRIENDSCHAT"
+    android:id="@+id/rlayout">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/TOP_CARD"
+    app:cardBackgroundColor="@color/white"
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp">
+    <LinearLayout
+        android:id="@+id/TOP_LAYOUT"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:textColor="@color/blacklight"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textSize="@dimen/_25sdp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_35sdp"
+            app:cardCornerRadius="@dimen/_18sdp"
+            android:layout_weight="3"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/whitelight"
+            android:outlineSpotShadowColor="@color/whitelight"
+            android:outlineAmbientShadowColor="@color/whitelight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/search"/>
+            <EditText
+                android:id="@+id/SEARCH_FRIENDSCHAT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:hint="Search Friends..."
+                android:layout_gravity="start"
+                android:layout_weight="3"
+                android:textColorHint="@color/gray"
+                android:padding="@dimen/_8sdp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/REQUEST_BTN"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/request"></ImageView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/USERLISTVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        android:layout_above="@+id/menu_cardview"
+        android:layout_below="@+id/TOP_CARD"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:background="@color/whitelight" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menu_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:outlineSpotShadowColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardBackgroundColor="#0080ff"/>
+
+            <ImageView
+                android:id="@+id/CHAT_MENU"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/chat_dark"
+                android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Home"
+                    android:textColor="#0080ff"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:outlineAmbientShadowColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/STATUS_MENU"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/moments"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Moments"
+                    android:textColor="#909090"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:outlineSpotShadowColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/CALL_MENU"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/call_light"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="Call"
+                    android:textColor="#909090"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:outlineAmbientShadowColor="@color/white"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/PROFILE_MENU"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/profile_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Profile"
+                    android:textColor="#909090"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

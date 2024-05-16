@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/listdesign"
+    android:layout_margin="@dimen/_1sdp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_3sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/PROFILEPIC"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/profile_icon"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_gravity="center"
+            app:civ_circle_background_color="@color/white"
+            />
+        <LinearLayout
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/NAMETEXT"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"></TextView>
+            <TextView
+                android:id="@+id/BIOTEXT"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Name"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10sdp"></TextView>
+
+        </LinearLayout>
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="@dimen/_21sdp"
+            android:layout_height="@dimen/_21sdp"
+            android:foreground="@drawable/voicecallfull"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/voicecallbtn">
+        </com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton>
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:foreground="@drawable/videocallfull"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:id="@+id/videocallbtn">
+
+        </com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

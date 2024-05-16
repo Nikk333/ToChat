@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MARK3"
+        tools:targetApi="31">
+        <activity
+            android:name=".CHAT_PHOTO"
+            android:exported="false" />
+        <activity
+            android:name=".CROP"
+            android:exported="false" />
+        <activity
+            android:name=".MOMENTPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".VIEWPROFILEPAGE"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo2" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple" />
+
+        <activity
+            android:name=".PROFILE_VIEW"
+            android:exported="false" />
+        <activity
+            android:name=".REQUESTPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".CALLPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".FRIENDSCHAT"
+            android:exported="false" />
+        <activity
+            android:name=".STATUS"
+            android:exported="false" />
+        <activity
+            android:name=".SETTING"
+            android:exported="false" />
+        <activity
+            android:name=".CHATWINDOW"
+            android:exported="false" />
+        <activity
+            android:name=".INFOPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".USERDETAILPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".FIRSTPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".LOGINPAGE"
+            android:exported="false" />
+        <activity
+            android:name=".HOME"
+            android:exported="false" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".NotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "695836359223",
+    "project_id": "mark4-c3fbe",
+    "storage_bucket": "mark4-c3fbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695836359223:android:b3a4936772459ad9835db2",
+        "android_client_info": {
+          "package_name": "com.chat.mark3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-w37kGol3w7T8F0_F5zuFIuHpHXQuYl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

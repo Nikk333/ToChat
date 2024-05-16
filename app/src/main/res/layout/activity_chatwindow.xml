@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatwindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CHATWINDOW"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/TOPLAYOUT"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/CHATWINDOW_BACK"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/backdark"></ImageView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/CHATWINDOW_PROFILE"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/profile_icon"></de.hdodenhof.circleimageview.CircleImageView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/CHATWINDOW_ONLINE"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_minus8sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:src="@drawable/online"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/personname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:id="@+id/personactive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/whitelight"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:id="@+id/CHATWINDOW_VOICECALL"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="@drawable/voicecallfulldark">
+
+        </com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton>
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:id="@+id/CHATWINDOW_VIDEOCALL"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="@drawable/videocallfulldark"></com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton>
+
+        <ImageView
+
+            android:id="@+id/CHATWINDOW_DOTS"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/dotsdark" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msgadpter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BOTTOMLAYOUT"
+        android:layout_below="@+id/TOPLAYOUT"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_minus2sdp"
+        android:background="@color/blacklight" />
+
+    <LinearLayout
+        android:id="@+id/BOTTOMLAYOUT"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/blacklight"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/TEXT_CARD"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_weight="3"
+            android:outlineAmbientShadowColor="@color/blackhighlight"
+            android:outlineSpotShadowColor="@color/blackhighlight"
+            app:cardBackgroundColor="@color/blackhighlight"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/MESSAGEBOX"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@null"
+                android:hint="Type Here......."
+                android:paddingStart="@dimen/_12sdp"
+                android:textColor="@color/whitehighlight"
+                android:textColorHint="@color/whitehighlight"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CHATWINDOW_IMAGEPICKER_CARDVIEW"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:outlineAmbientShadowColor="@color/blacklight"
+                android:outlineSpotShadowColor="@color/blacklight"
+                app:cardBackgroundColor="@color/blacklight"
+                app:cardCornerRadius="@dimen/_13sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/CHATWINDOW_IMAGEPICKER"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/addimgdark" />
+            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SENDBTN"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_9sdp"
+            android:outlineAmbientShadowColor="@color/blackhighlight"
+            android:outlineSpotShadowColor="@color/blackhighlight"
+            app:cardBackgroundColor="@color/blackhighlight"
+            app:cardCornerRadius="@dimen/_22sdp" >
+            <ImageView
+                android:id="@+id/SEND_IMG"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:src="@drawable/senddark"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                ></ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CHATWINDOW_EDIT"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_162sdp"
+        android:layout_below="@+id/TOPLAYOUT"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardBackgroundColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:layout_marginEnd="@dimen/_5sdp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+            <TextView
+                android:id="@+id/VIEW_PROFILE"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textColor="@color/whitelight"
+                android:text="View Profile"
+                />
+            <TextView
+                android:id="@+id/CLEAR_CHAT2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textColor="@color/whitelight"
+                android:text="Clear My Chat"
+                />
+            <TextView
+                android:id="@+id/CELAR_EVERYONE_CHAT"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textColor="@color/whitelight"
+                android:text="Clear Everyone Chat"
+                />
+            <TextView
+                android:id="@+id/EDIT_USER"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textColor="@color/whitelight"
+                android:text="Edit User"
+                />
+            <TextView
+                android:id="@+id/SPECIAL_PERMISSION"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textColor="@color/whitelight"
+                android:text="Make Best Friend"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
